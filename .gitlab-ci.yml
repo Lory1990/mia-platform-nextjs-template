@@ -1,0 +1,12 @@
+include:
+  - project: "platform/pipelines-templates"
+    file: "/build/node/template-react-yarn.yml"
+    ref: master
+
+default:
+  image: node:18
+
+build-site:
+  artifacts:
+    paths:
+      - .next
