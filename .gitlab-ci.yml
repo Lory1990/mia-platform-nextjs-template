@@ -3,8 +3,13 @@ include:
     file: "/build/node/template-react-yarn.yml"
     ref: master
 
+.docker-job:
+  variables:
+    COMMIT_SHA_FILEPATH: /etc/nginx/commit.sha
+
 default:
   image: node:18
+
 
 build-site:
   artifacts:
