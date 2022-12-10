@@ -1,7 +1,27 @@
-#Mia Platform Next JS Template
+# NextJS Template + SSR for Mia Platform
+This is a template to be used in Mia Platform console to create a new monorepo Frontend application using [NextJS](https://nextjs.org) (React based) withj SSR support.
 
-How to use it? Clone the repo in mia gitlab and you are ready, just push the code!
+The microservice comes with one page, the `index` one
+```
+http://localhost:3000
+```
+and it implements the technical endpoints for Kubernetes
+```
+/-/check
+/-/healthz
+/-/ready
+```
+## Local development
+Make sure you have installed the following tools
+* [NodeJs](https://nodejs.org/en/)
 
-#Troubleshooting
+Open the terminal in the applciation folder and hit
+```
+npm run install
+npm run dev
+```
 
-How can i cahnge the port number? Set the env variable `PORT` into the container configuration
+## Deploy
+The microservice comes with Build&Deploy gitlab pipeline (see `.gitlab-ci.yml`), simply push the code and tag it when you want to deploy.
+
+The build and deploy process complies the application and enables SSR (Server Side Rendering)
