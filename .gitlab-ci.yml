@@ -5,7 +5,7 @@ include:
 
 .docker-job:
   variables:
-    COMMIT_SHA_FILEPATH: /etc/nginx/commit.sha
+    COMMIT_SHA_FILEPATH: /usr/static/commit.sha
 
 default:
   image: node:18
