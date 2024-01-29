@@ -1,5 +1,5 @@
 # Production image, copy all the files and run next
-FROM node:16-alpine
+FROM node:21-alpine
 WORKDIR /app
 
 LABEL name="sample-app" \
