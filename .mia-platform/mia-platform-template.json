@@ -1,0 +1,71 @@
+{
+    "name": "NextJs template",
+    "description": "Starter for NextJS",
+    "type": "template",
+    "releaseStage": "stable",
+    "tenantId": "step",
+    "itemId": "nextjs-template",
+    "repositoryUrl": "https://github.com/Lory1990/mia-platform-nextjs-template/",
+    "label": "Quarkus template",
+    "categoryId": "kotlin",
+    "suportedBy": "Lorenzo De Francesco",
+    "documentation": {
+        "type": "markdown",
+        "url": "https://github.com/Lory1990/mia-platform-nextjs-template/main/README.md"
+    },
+    "image": {
+        "localPath": "./image.png"
+    },
+    "supportedByImage": {
+        "localPath": "./supportedByImage.jpeg"
+    },
+    "resources":{
+        "services":{
+            "nextjs-service":{
+                "name": "nextjs-service",
+                "description": "Simple nextjs frontend",
+                "archiveUrl": "https://github.com/Lory1990/mia-platform-nextjs-template/archive/main.tar.gz",
+                "containerPorts": [
+                    {
+                        "name": "http",
+                        "from": 80,
+                        "to": 3000,
+                        "protocol": "TCP"
+                    }
+                ],
+                "type": "template",
+                "defaultEnvironmentVariables": [
+                    {
+                      "name": "LOG_LEVEL",
+                      "value": "{{LOG_LEVEL}}",
+                      "valueType": "plain"
+                    },
+                    {
+                      "name": "HTTP_PORT",
+                      "value": "3000",
+                      "valueType": "plain"
+                    }
+                ],
+                "defaultProbes": {
+                    "liveness": {
+                        "initialDelaySeconds": 40,
+                        "periodSeconds": 15,
+                        "timeoutSeconds": 1,
+                        "successThreshold": 1,
+                        "failureThreshold": 3
+                    }
+                },
+                "defaultResources": {
+                    "cpuLimits": {
+                      "max": "150m",
+                      "min": "50m"
+                    },
+                    "memoryLimits": {
+                      "max": "100Mi",
+                      "min": "100Mi"
+                    }
+                  }
+            }
+        }
+    }
+}

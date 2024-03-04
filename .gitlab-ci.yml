@@ -10,6 +10,9 @@ include:
 default:
   image: node:18
 
+variables:
+  IMAGE_NAME: mia_template_image_name_placeholder
+
 
 build-site:
   artifacts:
