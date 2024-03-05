@@ -2,7 +2,6 @@
     "name": "NextJs Template",
     "description": "Starter for NextJS",
     "type": "template",
-    "releaseStage": "stable",
     "tenantId": "step",
     "itemId": "next-js-template",
     "repositoryUrl": "https://github.com/Lory1990/mia-platform-nextjs-template/",
